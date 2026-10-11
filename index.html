@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Branding Bar -->
+    <header class="top-bar">
+        <div class="logo">🚀 CSE_Docs // First-Year Terminal</div>
+    </header>
+
+    <div class="layout-container">
+        <!-- Sidebar Navigation Menu -->
+        <nav class="side-nav">
+            <h3>Jump to Topic</h3>
+            <ul>
+                <li><a href="#html-basics">HTML Structure</a></li>
+                <li><a href="#css-basics">CSS Selectors</a></li>
+                <li><a href="#git-basics">Git Workflow</a></li>
+                <li><a href="#cpp-basics">C++ Fundamentals</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Documentation Layout -->
+        <main class="content-area">
+            <h1>Technical Reference Guide</h1>
+            <p>A curated compilation of core web architectures and technical cheat sheets built during my first semester.</p>
+
+            <!-- Personal Developer Profile Card -->
+            <div class="profile-card">
+                <h3>🧑‍💻 Developer Profile</h3>
+                <table class="profile-table">
+                    <tr>
+                        <td><strong>Name:</strong></td>
+                        <td>Viraj Karvanje</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Branch:</strong></td>
+                        <td>Computer Science & Engineering (CSE)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Current Year:</strong></td>
+                        <td>1st Year (Semester 1)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus Areas:</strong></td>
+                        <td>Basic programming, Frontend Architectures, Version Control, Core Algorithms</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 15px; margin-bottom: 0;">
+                    <a href="mailto:virajkarvanje08@mail.com" class="btn-primary">📩 Contact Me via Email</a>
+                </p>
+            </div>
+
+            <!-- Topic 1: HTML -->
+            <section id="html-basics" class="doc-section">
+                <h2>1. HTML Foundational Tags</h2>
+                <p>Every element requires proper block closures and semantic definitions. Here are the core tags I use daily:</p>
+                <ul>
+                    <li><code><main></code> - Defines the primary dominant content wrapper.</li>
+                    <li><code><nav></code> - Groups navigation pathways and site hyperlinks.</li>
+                    <li><code><code></code> - Renders technical code snippets in a monospaced layout.</li>
+                </ul>
+            </section>
+
+            <!-- Topic 2: CSS -->
+            <section id="css-basics" class="doc-section">
+                <h2>2. CSS Selection & Reset</h2>
+                <p>Styling properties target specific DOM branches through standard class blocks or universal overrides:</p>
+                <div class="code-box">
+                    <pre>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</pre>
+                </div>
+            </section>
+
+            <!-- Topic 3: Git -->
+            <section id="git-basics" class="doc-section">
+                <h2>3. Git Local Workflow</h2>
+                <p>Essential terminal directives to commit code locally to a project repository before pushing changes online:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Terminal Command</th>
+                            <th>Operation Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>git init</code></td>
+                            <td>Initialise a blank local workspace repo</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add .</code></td>
+                            <td>Stage all current file changes into queue</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "msg"</code></td>
+                            <td>Lock in the changes permanently with a timestamp</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+           <!-- Topic 4: C++ Fundamentals -->
+            <section id="cpp-basics" class="doc-section">
+                <h2>4. C++ Language Blueprint & Selection Logic</h2>
+                <p>This reference model presents the compilation structure alongside standard conditional decision-making frameworks (if-else branching logic) utilized for software calculations:</p>
+                <div class="code-box">
+                    <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Integer variable assignment
+    int inputNumber = 24;
+
+    // Check if the remainder is zero when divided by 2
+    if (inputNumber % 2 == 0) {
+        cout << "The input evaluation result is: EVEN" << endl;
+    } else {
+        cout << "The input evaluation result is: ODD" << endl;
+    }
+
+    return 0;
+}</pre>
+                </div> <!-- 1. Look for this line that closes your code box -->
+
+                <!-- 🚀 PASTE THE INTERACTIVE LOGIC CHECKER WIDGET CODE RIGHT HERE 🚀 -->
+                <div class="interactive-widget">
+                    <span class="widget-badge">C++ LOGIC DEMO</span>
+                    <h2>Even or Odd Checker</h2>
+                    <p>Enter a whole number to test the same logic as the C++ example.</p>
+                    
+                    <div class="widget-form">
+                        <input type="number" id="numberInput" placeholder="e.g. 24">
+                        <button onclick="checkEvenOdd()">Check Number</button>
+                    </div>
+
+                    <div id="widgetResult" class="widget-result-box">
+                        Your result will appear here.
+                    </div>
+                    
+                    <p class="widget-hint">Try 24, 25, 0, or -7.</p>
+                </div>
+
+                <!-- JavaScript Logic Execution Engine -->
+                <script>
+                    function checkEvenOdd() {
+                        const inputField = document.getElementById('numberInput');
+                        const resultBox = document.getElementById('widgetResult');
+                        const val = inputField.value;
+
+                        if (val === '') {
+                            resultBox.innerText = "Please enter a valid number first!";
+                            resultBox.style.color = "#ef4444";
+                            resultBox.style.borderColor = "#ef4444";
+                            return;
+                        }
+
+                        const num = parseInt(val);
+
+                        if (num % 2 === 0) {
+                            resultBox.innerHTML = `Result: <strong>${num} is EVEN</strong>`;
+                            resultBox.style.color = "#34d399";
+                            resultBox.style.borderColor = "#34d399";
+                        } else {
+                            resultBox.innerHTML = `Result: <strong>${num} is ODD</strong>`;
+                            resultBox.style.color = "#fbbf24";
+                            resultBox.style.borderColor = "#fbbf24";
+                        }
+                    }
+                </script>
+                <!-- 🚀 END OF THE PASTE AREA 🚀 -->
+
+            </section> <!-- This closes the C++ section completely -->
+
+        </main> <!-- This closes your main content area -->
+    </div> <!-- This closes your layout container -->
+
+    <footer>
+        <p>&copy; 2026 Developer Documenter. Isolated Workspace Project.</p>
+    </footer>
+
+</body>
+</html>

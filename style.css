@@ -1,0 +1,332 @@
+/* 1. CORE COLOR PALETTE & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0b0f19; /* Deep midnight background */
+    color: #cbd5e1; /* Soft off-white text */
+    line-height: 1.7;
+}
+
+/* 2. BRADING HEADER BAR */
+.top-bar {
+    background-color: #111827;
+    color: #38bdf8;
+    padding: 16px 40px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #1f2937;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. MULTI-COLUMN CONTAINER SPLIT */
+.layout-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 40px 30px;
+}
+
+/* 4. MODERN LEFT SIDEBAR PANEL */
+.side-nav {
+    flex: 1;
+    background-color: #111827;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    height: fit-content;
+    position: sticky;
+    top: 40px;
+}
+
+.side-nav h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav ul li {
+    margin-bottom: 14px;
+}
+
+.side-nav ul li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    display: block;
+}
+
+.side-nav ul li a:hover {
+    color: #38bdf8; /* Vibrant cyan hover state */
+    padding-left: 6px;
+}
+
+/* 5. MAIN CONTENT LAYOUT */
+.content-area {
+    flex: 3;
+    background-color: #111827;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #f8fafc;
+    font-weight: 800;
+}
+
+.doc-section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #1f2937;
+}
+
+h2 {
+    color: #f1f5f9;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+ul {
+    padding-left: 24px;
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* 6. IMMERSIVE DARK CODE CARDS */
+code {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    font-size: 0.9rem;
+}
+
+.code-box {
+    background-color: #030712; /* Jet black inside code card */
+    border: 1px solid #1f2937;
+    padding: 24px;
+    border-radius: 8px;
+    font-family: "Fira Code", Consolas, Monaco, monospace;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.code-box pre {
+    color: #34d399; /* Emerald green logic highlighting */
+    font-size: 0.95rem;
+}
+
+/* 7. DATA GRID TABLE DESIGN */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #030712;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+}
+
+.data-table th, .data-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #1f2937;
+}
+
+.data-table th {
+    background-color: #1f2937;
+    color: #f8fafc;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table td {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* 8. ACCOUNT DEVELOPER PROFILE ELEMENT */
+.profile-card {
+    background-color: #1e293b;
+    border-left: 4px solid #3b82f6;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.profile-card h3 {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-table td {
+    padding: 8px 0;
+    border: none;
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+.profile-table td:first-child {
+    width: 130px;
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+/* 9. SUBMIT BUTTON PATHWAY */
+.btn-primary {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* 11. INTERACTIVE LOGIC CHECKER WIDGET STYLING */
+.interactive-widget {
+    background-color: #1e293b; /* Dark charcoal element background */
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 25px;
+    max-width: 500px;
+}
+
+.widget-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.interactive-widget h2 {
+    font-size: 1.5rem;
+    color: #f8fafc !important;
+    margin-bottom: 8px;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.interactive-widget p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.widget-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.widget-form input {
+    flex: 1;
+    background-color: #0f172a; /* Slate black input background */
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #f8fafc;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.widget-form input:focus {
+    border-color: #3b82f6;
+}
+
+.widget-form button {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.widget-form button:hover {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+.widget-result-box {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.widget-hint {
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    margin-top: 12px;
+    margin-bottom: 0 !important;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #475569;
+    font-size: 0.85rem;
+    border-top: 1px solid #1f2937;
+}
